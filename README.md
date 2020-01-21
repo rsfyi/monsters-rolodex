@@ -4,6 +4,7 @@
 - Decide the state and where it lives
 - What changes when state changes
   - What part of virtual dom changes becauses of state changes.
+- `Render method is called when ever you make changes in state.`
 
 ## Getting started
 
@@ -23,5 +24,3 @@
 - Updating to latest version of packages or react version update
   - yarn list react react-dom react-scripts - list packages versions from package.json
   - ^ - this means when ever npm see commands like yarn update or npm update, it going to find latest stable version
-
-`Render method is called when ever you make changes in state.`
