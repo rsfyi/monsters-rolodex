@@ -1,24 +1,27 @@
-1. decide on components
-2. decide the state and where it lives
-3. what changes when state changes
-   i. what part of virtual dom changes becauses of stage changes.
+# React and github pages
 
-Getting started
+- Decide how to divide projects into components
+- Decide the state and where it lives
+- What changes when state changes
+  - What part of virtual dom changes becauses of state changes.
 
-1. npx create-react-app my-app
+## Getting started
 
-Note - Render method is called when ever you make changes in state.
+- npx create-react-app my-app
+- Deploying apps to github pages
+  - Goto github
+  - Create new repository and copy https or ssh url
+  - Move to actual project
+  - git remote add origin - `https://github.com/rsdoc/monsters-rolodex.git`
+  - yarn add gh-pages
+  - goto package.json file and add an entry of - `"homepage":"https://rsdoc.github.io/monsters-rolodex"`
+  - add predeploy scripts to scripts object as - `"predeploy":"yarn build"`
+  - then add deploy scripts as - `"deploy":"gh-pages -d build"`
+  - from terminal - yarn deploy
+    - `clean gh-pages - rm -rf node_modules/gh-pages/.cache`
+  - published url for this repo - `https://rsdoc.github.io/monsters-rolodex`
+- Updating to latest version of packages or react version update
+  - yarn list react react-dom react-scripts - list packages versions from package.json
+  - ^ - this means when ever npm see commands like yarn update or npm update, it going to find latest stable version
 
-Deploying apps to github pages
-1.Goto github
-2.Create new repository and copy https or ssh url
-3.Move to actual project
-4.git remote add origin https://github.com/rsdoc/monsters-rolodex.git
-5.yarn add gh-pages
-6.goto package.json file and add an entry of "homepage":"https://rsdoc.github.io/monsters-rolodex"
-7.add predeploy scripts to scripts object as "predeploy":"yarn build"
-8.then add deploy scripts as "deploy":"gh-pages -d build"
-9.from terminal - yarn deploy
-10.clean gh-pages - rm -rf node_modules/gh-pages/.cache
-
-11. published url for this repo - https://rsdoc.github.io/monsters-rolodex
+`Render method is called when ever you make changes in state.`
